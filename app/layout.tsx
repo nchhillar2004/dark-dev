@@ -1,14 +1,8 @@
 import type { Metadata } from "next";
-import { Lato } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import Header from "@/components/Header";
-import { dark, neobrutalism } from "@clerk/themes";
-
-const font = Lato({
-  weight: "400",
-  subsets: ["latin"],
-});
+import { dark } from "@clerk/themes";
 
 export const metadata: Metadata = {
   title: "Dark Dev",
@@ -27,7 +21,7 @@ export default function RootLayout({
       }}
     >
       <html lang="en">
-        <body className={font.className} suppressHydrationWarning>
+        <body suppressHydrationWarning>
           <Header />
           <main className="h-fit pt-[80px]">{children}</main>
         </body>

@@ -4,7 +4,7 @@ export default function page() {
   return (
     <div className="getting-started">
       <div className="container">
-        <h1 className="font-bold text-center text-[40px]">Get Stated Here!</h1>
+        <h1 className="font-bold text-center text-[40px]">Get Started Here!</h1>
       </div>
     </div>
   );

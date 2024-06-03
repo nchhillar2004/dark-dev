@@ -1,5 +1,7 @@
 import Link from "next/link";
-import 'animate.css';
+import "animate.css";
+import Image from "next/image";
+import Bracket from "@/components/shared/Bracket";
 
 export default function Home() {
   return (
@@ -9,11 +11,27 @@ export default function Home() {
           Subscribe on YouTube
         </Link>
       </div>
-      <div className="container flex items-center h-[90vh] border-b border-[#3d3e43]">
-        <h1 className="lg:text-[200px] max-md:text-center font-mono text-[160px] max-md:text-[120px] font-bold leading-none">
-          <div className="animate__animated">Dark</div>
-          <div className="animate__animated">Dev</div>
-        </h1>
+      <div className="container">
+        <div className="container flex flex-col lg:flex-row justify-around items-center h-fit min-h-[100vh] border-b border-[var(--seperator-color)]">
+          <div className="heading">
+            <h1 className="lg:text-[200px] max-md:text-center font-mono text-[160px] max-md:text-[120px] font-bold leading-none">
+              <div className="animate__animated animate__slideInLeft lg:w-fit text-center w-full">Dark</div>
+              <div className="animate__animated animate__slideInRight lg:w-fit text-center w-full">
+                Dev
+              </div>
+            </h1>
+            <Bracket text="Get started today: Unveiling the Hidden Knowledge." />
+          </div>
+          <div className="banner">
+            <Image
+              src="/hacker.png"
+              alt="Dark Dev Black hat hacker banner"
+              height={500}
+              width={500}
+              className="select-none"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
