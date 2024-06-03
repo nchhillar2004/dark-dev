@@ -4,7 +4,7 @@ import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import AnimatedLogo from "./animations/AnimatedLogo";
 import "animate.css";
-import '@/styles/Header.css';
+import "@/styles/Header.css";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,12 +30,16 @@ export default function Header() {
               menuOpen ? "flex flex-col space-y-4" : "space-x-2"
             }`}
           >
-            <Link href="/courses" className="light-link py-2 px-4">
-              Courses
-            </Link>
             <Link href="/about" className="light-link py-2 px-4">
               About us
             </Link>
+            <Link href="/#pricing" className="light-link py-2 px-4">
+              Pricing
+            </Link>
+            <Link href="/courses" className="light-link py-2 px-4">
+              Courses
+            </Link>
+
             <Link href="/blog" className="light-link py-2 px-4">
               Blog
             </Link>
